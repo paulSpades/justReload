@@ -61,6 +61,8 @@ That's all - simple and stupid. Now grab it and get back to coding!
 
 ## To Do
 
+- make a minified version
+
 - change API to take a settings object 
   - a strings blacklist to exclude files from the checks
   - option to check binary files maybe (I'm thinking image files). IDK, might run too slow
