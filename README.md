@@ -23,7 +23,8 @@ The constructor has 2 parameters:
 - 'time' NUMBER/miliseconds (you can figure out what it does) - default is `4000`;
 - 'log' BOOLEAN (turns on console logging) - default is false;
 
-      let reload = new justReload(300, true); // sets the request loop to 300 miliseconds timeout and logging on
+      // sets the request loop to 300 miliseconds timeout and logging on
+      let reload = new justReload(300, true); 
       
 The resulting object has two methods:
       
