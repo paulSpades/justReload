@@ -37,7 +37,7 @@ Remember to remove the script and initialization code in your app/project produc
 
 Client - Works on Firefox and Chromium browsers.
 
-Servers - Only tested on the PHP dev server, but it should work with any server.
+Servers - Only tested on the PHP dev server, but it should work with any basic HTTP server.
 
 Very probably crashes when you have other JS errors.
 
