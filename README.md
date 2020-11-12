@@ -13,14 +13,14 @@ Download, copy in your js assets folder and include the justReload script into y
   
     <script src="/js/justReload.js"></script>
   
-Instantiate the constructor to a new object. It starts on it's own on document load.
+Instantiate the constructor to a new object. It starts on its own when jQuery triggers document load.
     
      let reload = new justReload(); 
      // or 
      window.reload = new justReload();
 
-The constructor has 2 parameters:
-- 'time' NUMBER/miliseconds (you can figure out what it does) - default is `4000`;
+The constructor has 2 optional parameters:
+- 'time' NUMBER/miliseconds (timeout between request loops) - default is `4000`;
 - 'log' BOOLEAN (turns on console logging) - default is false;
 
       // sets the request loop to 300 miliseconds timeout and logging on
