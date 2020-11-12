@@ -5,7 +5,7 @@ A simple(stupid) and easy to use auto-reload script.
 ## Requirements:
 
 _Requires jQuery_, for now.
-Nothing else. This will NOT be another NPM 'project'.
+Requires that you run an HTTP server.
 
 ## Use:
 
@@ -22,6 +22,13 @@ The constructor takes a single parameter - 'time' in miliseconds (you can figure
     let reload = new justReload(300);
     
 Remember to remove the line in the production version (however you do that for other scripts) or just comment it out
+
+## Tests
+
+Client - Works on Firefox and Chromium browsers.
+Servers - Only tested on the PHP dev server, but it should work with any server.
+
+Probably crashes when you have other JS erros.
 
 
 ## How it works
@@ -41,7 +48,9 @@ That's all - simple and stupid. Now grab it and get back to coding!
 
 - change API to take a settings object 
   - a strings blacklist to exclude files from the checks
-  - option to check binary files maybe (i'm thinking image files). IDK, might run too slow
+  - option to check binary files maybe (I'm thinking image files). IDK, might run too slow
+  
+- rewrite to remove jQuery dependency
   
 - optimization. If you know a way to make the ckeck even faster without adding more than a hundred lines of code - let me know!
 
