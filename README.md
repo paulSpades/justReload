@@ -15,13 +15,23 @@ Download, copy in your js assets folder and include the justReload script into y
   
 Instantiate the constructor to a new object. It starts on it's own on document load.
     
-    let reload = new justReload();
+     let reload = new justReload(); 
+     // or 
+     window.reload = new justReload();
 
-The constructor takes a single parameter - 'time' in miliseconds (you can figure out what it does) - default is `4000`
+The constructor has 2 parameters:
+- 'time' NUMBER/miliseconds (you can figure out what it does) - default is `4000`;
+- 'log' BOOLEAN (turns on console logging) - default is false;
 
-    let reload = new justReload(300);
+      let reload = new justReload(300, true);
+      
+      
+The resulting object has two methods:
+      
+      reload.stop(); // stops the request loop
+      reload.start(); // starts or restarts the request loop 
     
-Remember to remove the line in the production version (however you do that for other scripts) or just comment it out
+Remember to remove the script and initialization code in your app/project production version (however you do that for other scripts) or just comment it out.
 
 ## Tests
 
@@ -43,6 +53,10 @@ When a file string length changes a `location.reload()` gets fired.
 The current view (be it HTML or PHP or whatever dynamicly generated contraption) is also included in the list of files that are checked for changes. This may or may not apply to your whole project, depends on where you decide to add the script.
 
 That's all - simple and stupid. Now grab it and get back to coding!
+
+## Changes 
+
+- 11/12/2020 Initial commit, initial documentation, tweaks to both 
 
 ## To Do
 
