@@ -29,11 +29,11 @@ Remember to remove the line in the production version (however you do that for o
 The script just tries to find a list of script and link tags to check for changes.
 For each path in the list there's a `get` request that will trigger.
 
-It then checks the string length of the file to it's previous string length - this means that it will not detect small edits which result in the same string length.
+It then checks the string length of the file to its previous string length - this means that it will not detect small file edits which result in the same string length.
 
 When a file string length changes a `location.reload()` gets fired.
 
-The current view (be it HTML or PHP or whatever dynamicly generated contraption) is also included in the list of files that are checked for changes. This may or may not apply to your whole project, depends on where you add the script.
+The current view (be it HTML or PHP or whatever dynamicly generated contraption) is also included in the list of files that are checked for changes. This may or may not apply to your whole project, depends on where you decide to add the script.
 
 That's all - simple and stupid. Now grab it and get back to coding!
 
