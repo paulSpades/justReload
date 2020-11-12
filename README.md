@@ -36,7 +36,7 @@ Probably crashes when you have other JS erros.
 The script just tries to find a list of script and link tags to check for changes.
 For each path in the list there's a `get` request that will trigger.
 
-It then checks the string length of the file to its previous string length - this means that it will not detect small file edits which result in the same string length.
+It then checks the string length of the file to its previous string length - this means that it will not detect small file edits which result in the same string length. This also means that it doesn't try to create blobs for every file and get the size; and that it doesn't do full file or line comparisons. It's not ideal, but it's light and fast and responsive enough for me.
 
 When a file string length changes a `location.reload()` gets fired.
 
