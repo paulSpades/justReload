@@ -13,7 +13,7 @@ Download, copy in your js assets folder and include the justReload script into y
   
     <script src="/js/justReload.js"></script>
   
-Instantiate the constructor to a new object
+Instantiate the constructor to a new object. It starts on it's own on document load.
     
     let reload = new justReload();
 
