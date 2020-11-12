@@ -23,7 +23,7 @@ The constructor has 2 parameters:
 - 'time' NUMBER/miliseconds (you can figure out what it does) - default is `4000`;
 - 'log' BOOLEAN (turns on console logging) - default is false;
 
-      let reload = new justReload(300, true); // sets the request loop to 300 miliseconds and logging on
+      let reload = new justReload(300, true); // sets the request loop to 300 miliseconds timeout and logging on
       
 The resulting object has two methods:
       
@@ -35,9 +35,10 @@ Remember to remove the script and initialization code in your app/project produc
 ## Tests
 
 Client - Works on Firefox and Chromium browsers.
+
 Servers - Only tested on the PHP dev server, but it should work with any server.
 
-Probably crashes when you have other JS erros.
+Very probably crashes when you have other JS errors.
 
 
 ## How it works
