@@ -9,9 +9,9 @@ Nothing else. This will NOT be another NPM 'project'.
 
 ## Use:
 
-Download and include the justReload script into your development view
+Download, copy in your js assets folder and include the justReload script into your development root view
   
-    <script src="../js/justReload.js"></script>
+    <script src="/js/justReload.js"></script>
   
 Instantiate the constructor to a new object
     
