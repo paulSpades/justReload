@@ -59,21 +59,22 @@ That's all - simple and stupid. Now grab it and get back to coding!
 
 ## Changes 
 
+- 19/05/2021 Added github pages page; added minified version and a download link to docs; tweaks to docs.
 - 11/12/2020 Initial commit, initial documentation, tweaks to both 
 
 ## To Do
 
-- make a minified version
-
 - change API to take a settings object 
   - a strings blacklist to exclude files from the checks
-  - option to check binary files maybe (I'm thinking image files). IDK, might run too slow
+  - option to check binary files maybe (I'm thinking image files). IDK, might run too slowly
   
 - rewrite to remove jQuery dependency
   
-- optimization. If you know a way to make the ckeck even faster without adding more than a hundred lines of code - let me know!
+- optimization. If you know a way to make the ckeck even faster without adding more than a hundred lines of code - let me know! I'd like to keep this light and short, though.
 
-### Requests to package this for your favourite package/dependency/module mess manager will be denied.
 
-### Cheers!
+## Requests for various bugs and tweaks will be aproved if they are aligned with the project goals and based on donations.
+## Requests to package this for your favourite package/dependency/module mess manager will be denied.
+
+## Cheers!
  
