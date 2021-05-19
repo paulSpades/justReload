@@ -73,8 +73,8 @@ That's all - simple and stupid. Now grab it and get back to coding!
 - optimization. If you know a way to make the ckeck even faster without adding more than a hundred lines of code - let me know! I'd like to keep this light and short, though.
 
 
-## Requests for various bugs and tweaks will be aproved if they are aligned with the project goals and based on donations.
-## Requests to package this for your favourite package/dependency/module mess manager will be denied.
+### Requests for various bugs and tweaks will be aproved if they are aligned with the project goals and based on donations.
+### Requests to package this for your favourite package/dependency/module mess manager will be denied.
 
 ## Cheers!
  
