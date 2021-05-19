@@ -2,6 +2,8 @@
 
 A simple(stupid) and easy to use auto-reload script.
 
+[DOWNLOAD](https://github.com/paulSpades/justReload.git)
+
 ## Requirements:
 
 _Requires jQuery_, for now.
