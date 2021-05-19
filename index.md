@@ -1,37 +1,77 @@
-## Welcome to GitHub Pages
+# justReload
 
-You can use the [editor on GitHub](https://github.com/paulSpades/justReload/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+A simple(stupid) and easy to use auto-reload script.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Requirements:
 
-### Markdown
+_Requires jQuery_, for now.
+Requires that you run an HTTP server.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Use:
 
-```markdown
-Syntax highlighted code block
+Download, copy in your js assets folder and include the justReload script into your development root view
+  
+    <script src="/js/justReload.js"></script>
+  
+Instantiate the constructor to a new object. It starts on its own when jQuery triggers document load.
+    
+     let reload = new justReload(); 
+     // or 
+     window.reload = new justReload();
 
-# Header 1
-## Header 2
-### Header 3
+The constructor has 2 optional parameters:
+- 'time' NUMBER/miliseconds (timeout between request loops) - default is `4000`;
+- 'log' BOOLEAN (turns on console logging) - default is false;
 
-- Bulleted
-- List
+      // sets the request loop to 300 miliseconds timeout and logging on
+      let reload = new justReload(300, true); 
+      
+The resulting object has two methods:
+      
+      reload.stop(); // stops the request loop
+      reload.start(); // starts or restarts the request loop 
+    
+Remember to remove the script and initialization code in your app/project production version (however you do that for other scripts) or just comment it out.
 
-1. Numbered
-2. List
+## Tests
 
-**Bold** and _Italic_ and `Code` text
+Client - Works on Firefox and Chromium browsers.
 
-[Link](url) and ![Image](src)
-```
+Servers - Only tested on the PHP dev server, but it should work with any basic HTTP server.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Very probably crashes when you have other JS errors.
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/paulSpades/justReload/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## How it works
 
-### Support or Contact
+The script just tries to find a list of script and link tags to check for changes.
+For each path in the list there's a `get` request that will trigger.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+It then checks the string length of the file to its previous string length - this means that it will not detect small file edits which result in the same string length. This also means that it doesn't try to create blobs for every file and get the size; and that it doesn't do full file or line comparisons. It's not ideal, but it's light and fast and responsive enough for me.
+
+When a file string length changes a `location.reload()` gets fired.
+
+The current view (be it HTML or PHP or whatever dynamicly generated contraption) is also included in the list of files that are checked for changes. This may or may not apply to your whole project, depends on where you decide to add the script.
+
+That's all - simple and stupid. Now grab it and get back to coding!
+
+## Changes 
+
+- 11/12/2020 Initial commit, initial documentation, tweaks to both 
+
+## To Do
+
+- make a minified version
+
+- change API to take a settings object 
+  - a strings blacklist to exclude files from the checks
+  - option to check binary files maybe (I'm thinking image files). IDK, might run too slow
+  
+- rewrite to remove jQuery dependency
+  
+- optimization. If you know a way to make the ckeck even faster without adding more than a hundred lines of code - let me know!
+
+### Requests to package this for your favourite package/dependency/module mess manager will be denied.
+
+### Cheers!
+ 
