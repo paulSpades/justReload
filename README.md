@@ -2,7 +2,7 @@
 
 A simple(stupid) and easy to use auto-reload script.
 
-[DOWNLOAD](https://github.com/paulSpades/justReload.git)
+[DOWNLOAD](https://github.com/paulSpades/justReload/archive/refs/heads/main.zip)
 
 ## Requirements:
 
